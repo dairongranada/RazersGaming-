@@ -1,0 +1,804 @@
+.shapeBackground{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: auto;
+    width: 10%;
+    z-index: 1;
+    transform: scaleX(-1);
+    min-width: 140px;
+}
+
+.shapeBackground2{
+    position: absolute;
+    right: -2px;
+    bottom: 0;
+    height: auto;
+    width: 10%;
+    z-index: 1;
+    min-width: 200px;
+}
+
+
+.backgroundContainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(20deg, #000000fa, #1d1d1dfa);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.backgroundImage{
+    height: auto;
+    max-width: 2000px;
+    min-width: 1780px;
+    transform: rotate(-10deg) translate(30%, -45%);
+    position: absolute;
+    top: 60%;
+    right: 50%;
+    opacity: 0.01;
+}
+
+
+.headerSection{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 8vh;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    transition: all 0.5s;
+}
+
+.logoContainer{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    height: 80%;
+    width: auto;
+    margin-left: 2rem;
+}
+
+.menuContainer{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menuItem{
+    margin-right: 2rem;
+}
+
+.menuItemLink{
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.menuItem:last-child{
+    background-color: var(--main-color);
+    border-radius: 20px;
+    padding: 10px 20px;
+    box-shadow: 0 0 12px var(--main-color-shadow);
+}
+
+.hamburguerMenu{
+    display: none;
+    height: 34%;
+    width: 40px;
+    position: relative;
+    margin-right: 2rem;
+}
+
+.line{
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    height: 2px;
+    width: 100%;
+    border-radius: 2px;
+}
+
+.line:first-child{
+    top: 0;
+}
+
+.line:last-child{
+    top: auto;
+    bottom: 0;
+}
+
+
+/*HERO SECTION*/
+.heroSection{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.backgroundVideo{
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+}
+
+.leftSide{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.heroTextContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.mainTextHero{
+    text-transform: uppercase;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 0;
+    text-shadow: 0 0 12px black;
+}
+
+.secondTextHero{
+    font-size: calc(0.5vw + 15px);
+    font-weight: 500;
+    color: white;
+    text-shadow: 0 0 12px black;
+    margin-top: 0;
+    text-transform: none;
+    margin-bottom: 1rem;
+}
+
+.buttonHero{
+    color: white;
+    background-color: var(--main-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px 25px;
+    border-radius: 25px;
+    box-shadow: 0 0 12px var(--main-color-shadow);
+    transition: all 0.5s;
+}
+
+.buttonHero:hover{
+    box-shadow: 0 0 18px var(--main-color-shadow);
+}
+
+
+/*TEAMS SECTION*/
+.teamsSection{
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+    position: relative;
+}
+
+.teamsSectionContainer{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.teamsContainer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.teamContainer{
+    width: 33%;
+    height: 300px;
+    position: relative;
+    margin-right: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.teamContainer:last-child{
+    margin-right: 0;
+}
+
+.teamBackgroundImage{
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+    filter: grayscale(1) brightness(0.4);
+    transition: all 0.5s;
+}
+
+.teamContainer:hover .teamBackgroundImage{
+    transform: scale(1.1);
+    filter: none;
+}
+
+
+.gameLogo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: auto;
+    filter: drop-shadow(0 0 9px black);
+}
+
+
+
+/*NEWS SECTION*/
+.newsSection{
+    width: 100%;
+    height: auto;
+    margin-top: 15rem;
+    position: relative;
+    z-index: 2;
+}
+
+.newsSectionContainer{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.newContainer{
+    width: 33%;
+    height: 45vw;
+    margin-right: 5rem;
+    max-height: 700px;
+    border-radius: 20px;
+    position: relative;
+
+    /*BAckground properties*/
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.newContainer:last-child{
+    margin-right: 0;
+}
+
+.newContainer:hover .viewMoreContainer{
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.newContainer:hover .viewMoreNewsButton{
+    z-index: 1;
+    opacity: 1;
+}
+
+.newContainer:hover .newInfoContainer{
+    filter: brightness(0.3);
+}
+
+
+.viewMoreContainer{
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    background-color: black;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.5s;
+
+}
+
+.viewMoreNewsButton{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 8px;
+    text-align: center;
+    padding: 15px 100px;
+    width: 30%;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    transition: all 0.5s;
+}
+
+.viewMoreNewsButton:hover{
+    color: #121212;
+    background-color: white;
+    
+}
+
+.newInfoContainer{
+    width: 60%;
+    margin-left: 5%;
+    margin-right: auto;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 5%;
+    transition: all 0.5s;
+}
+
+.newTitle{
+    font-size: calc(0.5vw + 18px);
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+.newDescription{
+    font-weight: 500;
+    opacity: 0.7;
+    margin-bottom: 0.5rem;
+}
+
+.newDate{
+    font-size: calc(0.5vw + 8px);
+}
+
+
+
+/*CONTACT SECTION*/
+.contactSection{
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    margin-top: 15rem;
+    position: relative;
+}
+
+.contactSectionContainer{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.firstLineForm{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputContainer{
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: 5rem;
+    margin-top: 2rem;
+}
+
+.inputContainer:nth-of-type(2){
+    margin-right: 0;
+}
+
+.inputLabel{
+    color: white;
+    font-weight: 600;
+    font-size: calc(0.5vw + 10px);
+}
+
+.nameInput{
+    height: 40px;
+    width: 100%;
+    border: none;
+    background-color: #4b4b4b21;
+    outline: none;
+    color: white;
+    margin-top: 1rem;
+}
+
+.inputLine{
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.inputLine2{
+    background-color: var(--main-color);
+    height: 3px;
+    z-index: 2;
+    width: 0%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s linear;
+}
+
+.nameInput:focus ~ .inputLine2{
+    width: 100%;
+}
+
+.textArea{
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: #4b4b4b21;
+    outline: none;
+    resize: none;
+    color: white;
+    margin-top: 1rem;
+}
+
+.textArea:focus ~ .inputLine2{
+    width: 100%;
+}
+
+.sendButton{
+    padding: 10px 30px;
+    border-radius: 20px;
+    outline: none;
+    background-color: var(--main-color-less);
+    border-color: transparent;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 3rem;
+    transition: all 0.5s;
+}
+
+.sendButton:hover{
+    background-color: var(--main-color);
+    color: #121212;
+}
+
+
+
+
+
+
+
+.newsSectionPass{
+    margin-top: 14rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding-left: 6rem;
+}
+
+.newsSectionPass .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card_box {
+    z-index: 90;
+    width: 260px;
+    height: 336px;
+    border-radius: 20px;
+    background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.55);
+    transition: all .3s;
+  }
+  
+  .card_box:hover {
+    transform: scale(0.9);
+  }
+  
+  .card_box span {
+    position: absolute;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    top: -10px;
+    left: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card_box span::before {
+    position: absolute;
+    width: 150%;
+    height: 40px;
+    background-image: linear-gradient(45deg, var(--main-color) 0%, var(--main-color) 51%, var(--main-color)  100%);
+    transform: rotate(-45deg) translateY(-20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.23);
+  }
+
+
+.card_box .card_box_Premium::before {
+    content: 'Premium';
+}
+.card_box .card_box_Basic::before {
+    content: 'Basic';
+}
+.card_box .card_box_Basic::before {
+    content: 'Basic';
+}
+
+.card_box span::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    bottom: 0;
+    left: 0;
+    height: 10px;
+    z-index: -1;
+    box-shadow: 140px -140px var(--main-color);;
+    background-image: linear-gradient(45deg, #1a6e05 0%, #1a6e05  51%, #1a6e05  100%);
+  }
+
+
+
+.card_box_price h1{ font-size: 20px; text-align: center; }
+
+.card_box_buy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.76);
+    margin-top: 5rem;
+    gap: 1rem;
+}
+.card_box_buy button{
+    cursor: pointer;
+    transition: 1s;
+}
+
+.card_box_buy button:hover{
+    background-color: #018f01;
+}
+
+
+.card_box_advantages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card_box_advantages p{
+    font-size: 20px;
+}
+
+
+@media (max-width: 1000px){
+    .newsSectionPass{
+        flex-direction: column;
+        padding-left: 0rem;
+    }
+
+    .hamburguerMenu{
+        display: block;
+        cursor: pointer;
+    }
+
+    .menuItem{
+        display: none;
+    }
+
+    .menuItem:last-child{
+        transform: scale(0.8);
+        display: block;
+        margin-right: 1rem;
+    }
+
+    /*TEAMS*/
+    .teamsSectionContainer{
+        width: 80%;
+    }
+
+    .teamsContainer{
+        flex-direction: column;
+        margin-top: 1.5rem;
+    }
+
+    .teamContainer{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 200px;
+        margin-bottom: 1.5rem;
+    }
+
+    .teamContainer:last-child{
+        margin-bottom: 0;
+        margin-right: auto;
+    }
+
+
+    /*MATCHES SECTION*/
+    .matchesSection{
+        margin-top: 5rem;
+    }
+
+    .matchesSectionContainer{
+        width: 80%;
+    }
+
+    .matchesContainer{
+        flex-direction: column;
+        margin-top: 1.5rem;
+    }
+
+    .matchContainer{
+        width: 100%;
+        height: 100px;
+        margin-right: 0;
+        flex-direction: row;
+        margin-bottom: 1.5rem;
+    }
+
+    .gameLogoContainer{
+        height: 100%;
+        width: 25%;
+    }
+
+    .matchGameLogo{
+        height: 70%;
+        width: auto;
+    }
+
+    .teamsContainer{
+        width: 100%;
+    }
+
+    .teamName{
+        font-size: 11px;
+        margin-top: 0.3rem;
+    }
+
+    .leftTeam{
+        height: 100%;
+    }
+
+    .rightTeam{
+        height: 100%;
+    }
+
+    .leftTeamLogo{
+        height: 50%;
+    }
+
+    .rightTeamLogo{
+        height: 50%;
+    }
+
+    .matchInfoContainer{
+        height: 100%;
+        width: 25%;
+    }
+
+    .matchDate{
+        font-size: 10px;
+    }
+
+    .matchTime{
+        font-size: 16px;
+    }
+
+    .viewMatchLink{
+        margin-top: 0;
+        transform: scale(0.5);
+    }
+
+
+    /*NEWS SECTION*/
+    .newsSection{
+        margin-top: 5rem;
+    }
+
+    .newsSectionContainer{
+        width: 80%;
+    }
+
+    .newsContainer{
+        flex-direction: column;
+    }
+
+    .newContainer{
+        width: 100%;
+        height: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1.5rem;
+    }
+
+
+    /*CONTACT SECTION*/
+    .contactSection{
+        margin-top: 5rem;
+    }
+
+    .contactSectionContainer{
+        width: 80%;
+    }
+
+    .contactContentContainer{
+        margin-top: 1.5rem;
+    }
+
+    .sendButton{
+        margin-top: 1.5rem;
+        width: 50%;
+        height: 40px;
+    }
+
+
+}
+
+@media (max-width: 600px){
+    footer{display: none;}
+    center{ margin-top: 5rem;}
+}

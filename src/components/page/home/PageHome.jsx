@@ -1,0 +1,106 @@
+import React from 'react';
+import './PageHome.css';
+
+import GamingLogo from '../../../image/GamingLogo.png'
+import ShapeWebsite from '../../../image/ShapeWebsite.png'
+import Counter from '../../../image/Teams/Counter.jpg'
+import LogoCSGO from '../../../image/Teams/Logo CSGO.png'
+import Valorant from '../../../image/Teams/Valorant.jpg'
+import ValorantBlanco from '../../../image/Teams/Logo Valorant Blanco.png'
+
+
+
+export const PageHome = () => {
+  return (
+    <>
+      <div className="backgroundContainer"></div>
+
+      <div className="heroSection" id="Hero">
+        {/* <video playsInline autoPlay loop muted src={VideoBackground} className="backgroundVideo"></video> */}
+        <div className="leftSide">
+          <div className="heroTextContainer">
+            <h1 className="mainTextHero">Game Changing</h1>
+            <h2 className="secondTextHero">Make your gaming experience reach another level with us.</h2>
+            <a href="#" className="buttonHero">See More</a>
+          </div>
+        </div>
+      </div>
+
+      <img src={ShapeWebsite} alt="" className="shapeBackground" id="ShapeLeft" />
+      <div className="teamsSection">
+        <div className="teamsSectionContainer">
+          <h2 className="teamsSectionTitle">GAMES</h2>
+          <div className="teamsContainer">
+            <div className="teamContainer">
+              <img src={Counter} alt="" className="teamBackgroundImage" style={{ height: "330px" }} />
+              <img src={LogoCSGO} alt="" className="gameLogo" />
+            </div>
+            <div className="teamContainer">
+              <img src={Valorant} alt="" className="teamBackgroundImage" style={{ height: "100%", width: "100%" }} />
+              <img src={ValorantBlanco} alt="" className="gameLogo" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div className="newsSectionPass">
+
+        <div className="container">
+          <div className="card_box">
+            <span className='card_box_Premium' ></span>
+              <div className='card_box_buy'>
+                <div className='card_box_advantages'>
+                  <p><i className="fa-sharp fa-solid fa-check-to-slot"></i> Early access </p>
+                  <p style={{padding: "25px 9px 22px 21px", fontSize: "13px" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab fugit esse animi doloribus id! Autem lab, libero quae.</p>
+                </div>
+                <div className='card_box_price'>
+                <h1>$30.000 COP</h1>
+                <button style={{border:"none", marginTop:"1rem" }} className='buttonHero' >Buy premium pass</button>
+              </div>
+              </div>
+          </div>
+        </div>
+
+        <div className="container">
+          <div className="card_box">
+          <span className='card_box_Premium'></span>
+            <div className='card_box_buy'>
+              <div className='card_box_advantages'>
+                <p><i className="fa-sharp fa-solid fa-check-to-slot"></i> Early access </p>
+                <p style={{padding: "25px 9px 22px 21px", fontSize: "13px" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab fugit esse animi doloribus id! Autem lab, libero quae.</p>
+                </div>
+                <div className='card_box_price'>
+                  <h1>$20.000 COP</h1>
+                <button style={{border:"none", marginTop:"1rem" }} className='buttonHero' >Buy premium pass</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="container">
+          <div className="card_box">
+          <span className='card_box_Basic' ></span>
+            <div className='card_box_buy'>
+              <div className='card_box_advantages'>
+                <p><i className="fa-sharp fa-solid fa-check-to-slot"></i> Early access </p>
+                <p style={{padding: "25px 9px 22px 21px", fontSize: "13px" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab fugit esse animi doloribus id! Autem lab, libero quae.</p>
+                </div>
+                <div className='card_box_price'>
+                  <h1>$10.000 COP</h1>
+                <button style={{border:"none", marginTop:"1rem" }} className='buttonHero' >Buy basic pass</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+    </>
+
+
+  );
+}
