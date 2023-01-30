@@ -3,7 +3,6 @@ import './Navbar.css'
 import GamingLogo from '../../../image/GamingLogo.png'
 import $ from "jquery";
 
-import { SingUp } from "../../page/SingUp/SingUp";
 
   window.addEventListener("scroll", function(){
     if(window.scrollY>=10){
@@ -44,6 +43,5 @@ export const Navbar = () => (
                 <span className="line"></span>
             </div>
         </div> 
-        <SingUp />
     </>
 )
