@@ -1,8 +1,15 @@
 import { Routes, Route } from 'react-router-dom'
-import { PageHome } from '../components/page/home/PageHome'
-import { Page404 } from '../components/page/Page404/Page404'
+
 import { Navbar } from '../components/layouts/Navbar/Navbar'
 import { Footer } from '../components/layouts/Footer/Footer'
+
+import { PageHome } from '../components/page/home/PageHome'
+import { SingUp } from '../components/page/SingUp/SingUp'
+
+
+
+import { Page404 } from '../components/page/Page404/Page404'
+
 
 import '../css/index.css'
 

@@ -72,3 +72,35 @@ footer li{
     color: #fff;
     font-weight: 500;
     font-size: 2rem;}
+
+.formSendEmail{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 5rem;
+    gap: 10px;
+}
+
+.formSendEmail div{
+    display: flex;
+    flex-direction: column;
+}
+
+.formSendEmail input,textarea{
+    background-color: #444444fb;
+    width: 250px;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.formSendEmail button{
+    background-color: #016e01;
+    cursor: pointer;
+    width: 250px;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}

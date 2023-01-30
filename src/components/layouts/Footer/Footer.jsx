@@ -14,7 +14,7 @@ export const Footer = () => {
                 </div>
             </div>
         </div>
-        <div>
+        <div  className='navigations' >
             <ul>
                 <li>Home</li>
                 <li>Games</li>
@@ -26,12 +26,21 @@ export const Footer = () => {
 
 
         <div  className='redes_sociales' >
-             
             <h5 style={{fontSize:"25px" }} >Social media</h5>
             <div className='reds_socials_icons'>
                 <a href="https://github.com/dairongranada"> <i class="fa-brands fa-github"></i>  </a>
                 <a href="https://instagram.com/dairongranadaa"> <i class="fa-brands fa-instagram"></i> </a>
                 <a href="https://www.facebook.com/DAIRON.CG/"> <i class="fa-brands fa-facebook"></i> </a>
+            </div>
+        </div>
+
+
+
+        <div className='form_' >
+            <div className='formSendEmail'>
+                <div><label htmlFor="Email">Email *</label>  <input type="email" /></div>
+                <div><label htmlFor="Message">Message *</label>  <textarea></textarea></div>
+                <button>Send</button>                
             </div>
         </div>
 

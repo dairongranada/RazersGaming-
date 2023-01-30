@@ -1,5 +1,6 @@
-import React from 'react';
 import './PageHome.css';
+import React, { useEffect, useState } from "react";
+import $ from "jquery";
 
 import GamingLogo from '../../../image/GamingLogo.png'
 import ShapeWebsite from '../../../image/ShapeWebsite.png'
@@ -7,16 +8,32 @@ import Counter from '../../../image/Teams/Counter.jpg'
 import LogoCSGO from '../../../image/Teams/Logo CSGO.png'
 import Valorant from '../../../image/Teams/Valorant.jpg'
 import ValorantBlanco from '../../../image/Teams/Logo Valorant Blanco.png'
+import VideoBackground from '../../../image/VideoBackground.mp4'
+
+
+
 
 
 
 export const PageHome = () => {
+  
+  useEffect(() => {
+    $('#change_status_vol ').html(`<span id='change_status_vol'>Muted <i class="fa-solid fa-volume-xmark"></i></span>`)
+  }, [])
+
+
+ 
+function changeStatus() {
+
+}
+
+
+
   return (
     <>
       <div className="backgroundContainer"></div>
-
       <div className="heroSection" id="Hero">
-        {/* <video playsInline autoPlay loop muted src={VideoBackground} className="backgroundVideo"></video> */}
+        <video playsInline autoPlay loop muted  src={VideoBackground} className="backgroundVideo"></video>
         <div className="leftSide">
           <div className="heroTextContainer">
             <h1 className="mainTextHero">Game Changing</h1>
@@ -24,6 +41,9 @@ export const PageHome = () => {
             <a href="#" className="buttonHero">See More</a>
           </div>
         </div>
+        <div onClick={changeStatus} className="Volume">
+              <span   id='change_status_vol'><i class="fa-solid fa-volume-high"></i> </span>
+          </div>
       </div>
 
       <img src={ShapeWebsite} alt="" className="shapeBackground" id="ShapeLeft" />
@@ -41,6 +61,7 @@ export const PageHome = () => {
             </div>
           </div>
         </div>
+        
       </div>
 
 

@@ -137,6 +137,7 @@
 }
 
 .backgroundVideo{
+    width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
@@ -633,7 +634,49 @@ form{
 }
 
 
+.form_{
+    width: 294px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* V O L U M E N */
+.Volume{
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    font-size: 38px;
+    font-weight: bold;
+    left: 0;
+}
+
+#change_status_vol{
+    color: var(--main-color);
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0.5rem 2rem;
+    cursor: pointer;
+}
+
+
+#change_status_vol i{cursor: pointer;
+}
+
+
+
+
+
+
+
 @media (max-width: 1000px){
+    .redes_sociales,  .navigations{
+        display: none;
+    }
+
     .newsSectionPass{
         flex-direction: column;
         padding-left: 0rem;
