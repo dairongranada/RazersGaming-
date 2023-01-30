@@ -22,6 +22,8 @@ function App() {
     <Routes>
           <Route path='/' element= {<PageHome />} />
           <Route path="*" element= {<Page404 />} />
+          <Route path="sing/up" element= {<SingUp />} />
+
     </Routes>
     <Footer />
 

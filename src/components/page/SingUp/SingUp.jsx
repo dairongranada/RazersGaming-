@@ -1,6 +1,5 @@
 import './SingUp.css';
 import React, { useEffect, useState } from "react";
-import $ from "jquery";
 
 
 
@@ -9,7 +8,9 @@ import $ from "jquery";
 
 export const SingUp = () => (
   <>
-    <div className="backgroundSingUpContainer">
+  
+    <div className="backgroundContainer">
+
       <div><div class="SingUp_Card">
         <h4 class="title">Log In!</h4>
         <form>
@@ -27,6 +28,7 @@ export const SingUp = () => (
         </form>
       </div>
     </div>
+
 
     </div>
 
