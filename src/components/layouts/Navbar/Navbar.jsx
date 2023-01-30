@@ -24,7 +24,7 @@ export const Navbar = () => {
         <i onClick={CloseMenu} className='bx bx-menu' style={{cursor:"pointer"}} ></i>
       }
 
-      <span className="logo_name">Market Tecnology</span>
+      <span className="logo_name">RAZERS GAMING</span>
     </div>
 
     <ul class="nav-links">
