@@ -10,7 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../../../image/pcRegistroLogeo.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.747),rgba(0, 0, 0, 0.945)), url("../../../image/pcRegistroLogeo.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
