@@ -12,9 +12,10 @@
   left: 0;
   height: 100%;
   width: 260px;
-  background: #000;
+  background: #121212;
   z-index: 100;
   transition: all 0.5s ease;
+  box-shadow: 1px 10px 10px #040404;
 }
 .sidebar.close{
   width: 78px;
@@ -64,7 +65,7 @@
   transition: all 0.4s ease;
 }
 .sidebar .nav-links li:hover{
-  background: #1d1b31;
+  background: #30303a;
 }
 .sidebar .nav-links li .iocn-link{
   display: flex;
@@ -108,7 +109,7 @@
 .sidebar .nav-links li .sub-menu{
   padding: 6px 6px 14px 80px;
   margin-top: -10px;
-  background: #1d1b31;
+  background: #17171b;
   display: none;
 }
 .sidebar .nav-links li.showMenu .sub-menu{
@@ -169,7 +170,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #000;
+  background: #1a1a1d;
   padding: 12px 0;
   transition: all 0.5s ease;
 }
@@ -189,7 +190,7 @@
   object-fit: cover;
   border-radius: 16px;
   margin: 0 14px 0 12px;
-  background: #1d1b31;
+  background: #1a1a1d;
   transition: all 0.5s ease;
 }
 .sidebar.close .profile-details img{
@@ -231,7 +232,7 @@
 }
 .home-section .home-content .bx-menu,
 .home-section .home-content .text{
-  color: #11101d;
+  color: #121212;
   font-size: 35px;
 }
 .home-section .home-content .bx-menu{

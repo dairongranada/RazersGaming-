@@ -39,11 +39,14 @@ function changeStatus() {
             <div className="heroTextContainer">
               <h1 className="mainTextHero">Game Changing</h1>
               <h2 className="secondTextHero">Make your gaming experience reach another level with us.</h2>
-              <a href="#" className="buttonHero">See More</a>
+              <div style={{display:"flex", gap:"20px" }}>
+                  <a href="/sing/up" className="buttonHero">Sign in</a>
+                  <a href="/sing/up" className="buttonHero">Sign up</a>
+              </div>
             </div>
           </div>
           <div onClick={changeStatus} className="Volume">
-                <span   id='change_status_vol'><i class="fa-solid fa-volume-high"></i> </span>
+                <span  id='change_status_vol'><i class="fa-solid fa-volume-high"></i> </span>
             </div>
         </div>
 

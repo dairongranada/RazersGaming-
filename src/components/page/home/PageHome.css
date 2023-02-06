@@ -525,6 +525,7 @@ form{
     justify-content: center;
     align-items: center;
     gap: 50px;
+    margin-bottom: 6rem;
     padding-left: 6rem;
 }
 
