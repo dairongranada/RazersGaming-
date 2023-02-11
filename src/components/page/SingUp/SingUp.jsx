@@ -5,79 +5,93 @@ import 'boxicons'
 
 export const SingUp = () => {
 
-  const [changeS, setChanges] = useState()
+  // const [changeS, setChanges] = useState()
 
-  const iniciarSesionC =()=> {
-    setChanges("active")
-  }
+  // const iniciarSesionC =()=> {
+  //   setChanges("active")
+  // }
   
 
   return (
     <>
-    <div className='contRegAndLog'>
-  
-    <div className="container-form sign-up">
-      <div className="welcome-back">
-        <div className="message">
-          <h2>Bienvenido a RAZERS GAMING</h2>
-          <p>si ya tienes una cuenta por favor inicia sesion aqui</p>
-          <button onClick={iniciarSesionC} className='sign-up-btn'>Iniciar Sesion</button>
+      <div className='contRegAndLog'>
+        
+        <div className="contInfotransL">
+
+          <div className="contTitleInf">
+            <h2>¿DO YOU ALREADY HAVE AN ACCOUNT?</h2>
+          </div>
+
+          <div className="contTextInf">
+            <p>If you already have an account, you do not have to go through the
+              Registration process, you must go to the login process with the data
+              that you have previously registered by clicking on the following button
+            </p>
+          </div>
+          
+          <div className="contBtnLogTrans">
+            <button className='BtnLogTrans'>go to login</button>
+          </div>
+
         </div>
+
+        <div className="contFormRegister">
+
+          <div className="FormRegister">
+            <h2>Register</h2>
+
+            <div className="contIcons">
+
+              <div className="border-icono">
+                <box-icon type='logo' name='instagram'></box-icon>
+              </div>
+
+              <div className="border-icono">
+                <box-icon type='logo' name='facebook-circle'></box-icon>
+              </div>
+
+              <div className="border-icono">
+                <box-icon name='linkedin' type='logo' ></box-icon>
+              </div>
+
+            </div>
+
+            <div className="contInpustForM">
+              <div className="boxInput">
+                <input type="text" placeholder='Full Name'/>
+              </div>
+
+              <div className="boxInput">
+                <input type="email" placeholder='Email'/>
+              </div>
+
+              <div className="boxInput">
+                <input type="password" placeholder='Password'/>
+              </div>
+
+            </div>
+
+            <div className="contBtnForm">
+              <button className='BtnForm'>Register</button>
+            </div>
+
+          </div>
+        </div>
+              
       </div>
-
-      <form className='formulario'>
-        <h2 className="create-account">Crear una cuenta</h2>
-        <div className="iconos">
-          <div className="border-icono">
-            <box-icon type='logo' name='instagram'></box-icon>
-          </div>
-          <div className="border-icono">
-            <box-icon type='logo' name='facebook-circle'></box-icon>
-          </div>
-          <div className="border-icono">
-            <box-icon name='linkedin' type='logo' ></box-icon>
-          </div>
-        </div>
-        <p className="cuenta-gratis">Crear una cuenta gratis</p>
-        <input type="text" placeholder='Nombre'/>
-        <input type="email" placeholder='Email'/>
-        <input type="password" placeholder='Contraseña'/>
-        <button className='RegisterButton'>Registrarse</button>
-      </form>
-    </div>
-
-    <div className="container-form sign-in">
-    <form className={`formulario`}>
-        <h2 className="create-account">Iniciar Sesion</h2>
-        <div className="iconos">
-          <div className="border-icono">
-            <box-icon type='logo' name='instagram'></box-icon>
-          </div>
-          <div className="border-icono">
-            <box-icon type='logo' name='facebook-circle'></box-icon>
-          </div>
-          <div className="border-icono">
-            <box-icon name='linkedin' type='logo' ></box-icon>
-          </div>
-        </div>
-        <p className="cuenta-gratis">¿Aun no tienes una cuenta?</p>
-        <input type="email" placeholder='Email'/>
-        <input type="password" placeholder='Contraseña'/>
-        <input type="button" placeholder='Iniciar Sesion'/>
-        {/* <button>Iniciar Sesion</button> */}
-      </form>
-      <div className="welcome-back">
-        <div className="message">
-          <h2>Bienvenido de nuevo</h2>
-          <p>si aun no tienes una cuenta por favor registrarse aqui aqui</p>
-          <button className='sign-in-btn'>Iniciar Sesion</button>
-        </div>
-      </div>
-
-      
-    </div>
-
-  </div>
-  </>
+    </>
   )
 }
+
+
+{/* <div className="iconos">
+          <div className="border-icono">
+            <box-icon type='logo' name='instagram'></box-icon>
+          </div>
+          <div className="border-icono">
+            <box-icon type='logo' name='facebook-circle'></box-icon>
+          </div>
+          <div className="border-icono">
+            <box-icon name='linkedin' type='logo' ></box-icon>
+          </div>
+        </div> */}
