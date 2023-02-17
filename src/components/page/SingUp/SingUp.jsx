@@ -1,156 +1,80 @@
 import './SingUp.css';
 import React, { useEffect, useState } from "react";
-import 'boxicons'
 
 
 export const SingUp = () => {
 
-  const [changeS, setChanges] = useState()
+const [first, setfirst] = useState()
 
-  useEffect(() => {
-    setChanges(0)
-  },[])
+
+
+  // $(".textbox input").focusout(function(){
+  //   if($(this).val() == ""){
+  //     $(this).siblings().removeClassName("hidden");
+  //     $(this).css("background","#554343");
+  //   }else{
+  //     $(this).siblings().addClassName("hidden");
+  //     $(this).css("background","#484848");
+  //   }
+  // });
   
-  const iniciarSesionC =()=> {
-    setChanges(1)
-  }
-  
-  const register =()=> {
-    setChanges(0)
-  }
+  // $(".textbox input").keyup(function(){
+  //   var inputs = $(".textbox input");
+  //   if(inputs[0].value != "" && inputs[1].value){
+  //     $(".login-btn").attr("disabled",false);
+  //     $(".login-btn").addClassName("active");
+  //   }else{
+  //     $(".login-btn").attr("disabled",true);
+  //     $(".login-btn").removeClassName("active");
+  //   }
+  // }); 
+
 
   return (
     <>
+    <div className="backgroundContainer"></div>
 
-      {(changeS == 0) && 
-        <div className="contRegAndLog">
-          <div className="contInfotransL">
+    <div className='Login-content'>
+      <div className="login-form">
+          <div className="logo"><span>Team Razers</span></div>
 
-            <div className="contTitleInf">
-              <h2>¿DO YOU ALREADY HAVE AN ACCOUNT?</h2>
-            </div>
+        <h6>Sign In</h6>
 
-            <div className="contTextInf">
-              <p>If you already have an account, you do not have to go through the
-                Registration process, you must go to the login process with the data
-                that you have previously registered by clicking on the following button
-              </p>
-            </div>
-
-            <div className="contBtnLogTrans">
-              <button onClick={iniciarSesionC} className='BtnLogTrans'>go to login</button>
-            </div>
-
+        <form action="">
+          <div className="textbox">
+            <input type="text" placeholder="Username Or Email" />
+            <span className="check-message hidden">Required</span>
           </div>
 
-          <form className="contFormRegister">
+          <div className="textbox">
+            <input type="password" placeholder="Password" />
+            <span className="check-message hidden">Required</span>
+          </div>
 
-            <div className="FormRegister">
-              <h2>Register</h2>
+          <div className="options">
+            <label className="remember-me">
+              <span className="checkbox">
+                <input type="checkbox" />
+                <span className="checked"></span>
+              </span>
+              Remember me
+            </label>
+            <a href="#">Forgot Your Password</a>
+          </div>
 
-              <div className="contIcons">
+          <input type="submit" value="Log In Now" className="login-btn" />
 
-                <div className="border-icono">
-                  <box-icon type='logo' name='instagram'></box-icon>
-                </div>
+          <div className="privacy-link">
+            <a href="#">Privacy Policy</a>
+          </div>
+        </form>
 
-                <div className="border-icono">
-                  <box-icon type='logo' name='facebook-circle'></box-icon>
-                </div>
-
-                <div className="border-icono">
-                  <box-icon name='linkedin' type='logo' ></box-icon>
-                </div>
-
-              </div>
-
-              <div className="contInpustForM">
-                <div className="boxInput">
-                  <input type="text" placeholder='Full Name'/>
-                </div>
-
-                <div className="boxInput">
-                  <input type="email" placeholder='Email'/>
-                </div>
-
-                <div className="boxInput">
-                  <input type="password" placeholder='Password'/>
-                </div>
-
-              </div>
-
-              <div className="contBtnForm">
-                <button type='sumbit' className='BtnForm'>Register</button>
-              </div>
-
-            </div>
-          </form> 
+        <div className="dont-have-account">
+          Don't have an Razers Games account?
         </div>
-      }
-
-      {(changeS == 1) &&
-      
-        <div className='contRegAndLog'>
-
-          <div className="contFormRegister">
-
-            <form className="FormRegister">
-              <h2>Login</h2>
-
-              <div className="contIcons">
-
-                <div className="border-icono">
-                  <box-icon type='logo' name='instagram'></box-icon>
-                </div>
-
-                <div className="border-icono">
-                  <box-icon type='logo' name='facebook-circle'></box-icon>
-                </div>
-
-                <div className="border-icono">
-                  <box-icon name='linkedin' type='logo' ></box-icon>
-                </div>
-
-              </div>
-
-              <div className="contInpustForM">
-
-                <div className="boxInput">
-                  <input type="email" placeholder='Email'/>
-                </div>
-
-                <div className="boxInput">
-                  <input type="password" placeholder='Password'/>
-                </div>
-
-              </div>
-
-              <div className="contBtnForm">
-                <button type='sumbit' className='BtnForm'>Login</button>
-              </div>
-
-            </form>
-            </div>
-
-            <div className="contInfotransL">
-
-              <div className="contTitleInf">
-                <h2>¿Do not you have an account yet?</h2>
-              </div>
-
-              <div className="contTextInf">
-                <p>If you do not have an account yet, you must complete the registration
-                  process to create it, and thus enjoy our entire website
-                </p>
-              </div>
-
-              <div className="contBtnLogTrans">
-                <button onClick={register} className='BtnLogTrans'>Go to Register</button>
-              </div>
-          </div>        
-        </div>
-      }
-
+      </div>
+    </div>
+          
     </>
   )
 }

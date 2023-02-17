@@ -189,7 +189,7 @@
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
-    padding: 15px 25px;
+    padding: 10px 25px;
     border-radius: 25px;
     box-shadow: 0 0 12px var(--main-color-shadow);
     transition: all 0.5s;
@@ -197,6 +197,7 @@
 
 .buttonHero:hover{
     box-shadow: 0 0 18px var(--main-color-shadow);
+    background-color: #00a500;  
 }
 
 
@@ -266,7 +267,7 @@
 }
 
 
-
+x
 /*NEWS SECTION*/
 .newsSection{
     width: 100%;
@@ -310,7 +311,7 @@
 
 .newContainer:hover .viewMoreContainer{
     z-index: 1;
-    opacity: 0.6;
+    opacity: 0.6
 }
 
 .newContainer:hover .viewMoreNewsButton{
@@ -326,6 +327,7 @@
 .viewMoreContainer{
     height: 100%;
     width: 100%;
+
     border-radius: inherit;
     background-color: black;
     z-index: -1;

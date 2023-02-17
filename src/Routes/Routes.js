@@ -7,7 +7,7 @@ import { PageHome } from '../components/page/home/PageHome'
 import { SingUp } from '../components/page/SingUp/SingUp'
 
 
-
+import { Admin } from '../components/page/Admin/Admin'
 import { Page404 } from '../components/page/Page404/Page404'
 
 
@@ -22,8 +22,8 @@ function App() {
     <Routes>
           <Route path='/' element= {<PageHome />} />
           <Route path="*" element= {<Page404 />} />
-          <Route path="/sing/up" element= {<SingUp />} />
-
+          <Route path="/sing/in" element= {<SingUp />} />
+          <Route path="/Views/Admin/" element= {<Admin />} />
     </Routes>
     <Footer />
 

@@ -18,7 +18,7 @@ import VideoBackground from '../../../image/VideoBackground.mp4'
 export const PageHome = () => {
   
   useEffect(() => {
-    $('#change_status_vol ').html(`<span id='change_status_vol'>Muted <i class="fa-solid fa-volume-xmark"></i></span>`)
+    $('#change_status_vol ').html(`<span id='change_status_vol'>Muted <i className="fa-solid fa-volume-xmark"></i></span>`)
   }, [])
 
 
@@ -40,13 +40,12 @@ function changeStatus() {
               <h1 className="mainTextHero">Game Changing</h1>
               <h2 className="secondTextHero">Make your gaming experience reach another level with us.</h2>
               <div style={{display:"flex", gap:"20px" }}>
-                  <a href="/sing/up" className="buttonHero">Sign in</a>
-                  <a href="/sing/up" className="buttonHero">Sign up</a>
+                  <a href="/sing/in" className="buttonHero">Sign in</a>
               </div>
             </div>
           </div>
           <div onClick={changeStatus} className="Volume">
-                <span  id='change_status_vol'><i class="fa-solid fa-volume-high"></i> </span>
+                <span  id='change_status_vol'><i className="fa-solid fa-volume-high"></i> </span>
             </div>
         </div>
 

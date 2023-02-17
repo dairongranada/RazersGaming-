@@ -1,141 +1,246 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Chakra Petch';
-}
-.contRegAndLog {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.747),rgba(0, 0, 0, 0.945)), url("../../../image/pcRegistroLogeo.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #fff;
-}
-.contRegAndLog .contInfotransL {
-    width: 40%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 30px;
-    margin-left: 80px;
-}
-.contInfotransL .contTitleInf {
-    text-align: center;
-}
-.contInfotransL .contTextInf {
-    text-align: center;
-}
-.contInfotransL .contBtnLogTrans {
+    font-family: "hind",sans-serif;
+    text-decoration: none;
+  }
+  
+  
+  .Login-content{
     width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
-}
-.contBtnLogTrans .BtnLogTrans {
-    width: 30%;
-    height: 50px;
-    color: #fff;
-    background-color: #00AF00;
-    transition: 0.5s all;
-    border-radius: 60px;
-    cursor: pointer;
-    font-size: 20px;
-}
-.BtnLogTrans:hover{
-    background-color: #0adf0a;
-}
-.contRegAndLog .contFormRegister {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 5px;
-    color: #fff;
+    margin: 3rem 0;
 }
 
-.contRegAndLog .contFormRegister .FormRegister {
-    width: 55%;
-    height: 80%;
-    background-color: rgba(0, 0, 0, 0.645);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.contRegAndLog .contFormRegister .FormRegister .contIcons {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
+  .login-form{
+    width: 400px;
+    background: #202020;
+    padding: 30px 60px;
+  }
+  
+  .logo{
+    height: 70px;
+    text-align: center;
+
+  }
+  
+  .logo span{
+    font-family: 'Chakra Petch';
     color: #fff;
-}
-.contIcons .border-icono {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: white;
+    font-size: 35px;
+    font-weight: 900;
+  }
+  
+  .social-media{
     display: flex;
-    justify-content: center;
+    margin: 30px 0;
+  }
+  
+  .social-media button{
+    height: 50px;
+    width: 100px;
+    margin-right: 10px;
+    display: flex;
     align-items: center;
-    font-size: 1.5rem;
-    color: #fff;
-    transition: 0.5s all;
+    justify-content: center;
     cursor: pointer;
-}
-.contIcons .border-icono:hover {
-    background-color: var(--main-color);
-    transition: 0.5s all;
-}
-.contInpustForM {
-    width: 100%;
-    height: auto;
-    gap: 10px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-.contInpustForM .boxInput {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-    margin-top: 25px;
-}
-.boxInput input{
-    width: 70%;
-    height: 30px;
     border: none;
-    border-bottom: solid 2px white;
-    color: #fff;
-    background: transparent;
-    font-size: 20px;
-}
-.contBtnForm {
+    transition: .3s linear;
+  }
+  
+  .social-media button:last-child{
+    margin: 0;
+  }
+  
+  .social-media button img{
+    width: 20px;
+  }
+  
+  .fb{
+    background: #4267b2;
+  }
+  
+  .google{
+    background: #fff;
+  }
+  
+  .ps{
+    background: #02b3e8;
+  }
+  
+  .xbox{
+    background: #107c10;
+  }
+  
+  .switch{
+    background: #e60012;
+  }
+  
+  .social-media button:hover {
+    opacity: .7;
+  }
+  
+  .login-form h6{
+    color: #f1f1f1;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  
+  .textbox{
     width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
-.contBtnForm .BtnForm {
-    width: 30%;
     height: 50px;
+    position: relative;
+    margin-top: 15px;
+  }
+  
+  .textbox input{
+    width: 100%;
+    height: 50px;
+    border: none;
+    background: #2b2b2b;
+    padding: 0 15px;
+    font-size: 16px;
+    outline: none;
+    color: #f4f4f4;
+  }
+  
+  .textbox input:focus{
+    background: #484848 !important;
+  }
+  
+  .check-message{
+    position: absolute;
+    top: 50%;
+    right: 10px;
     color: #fff;
-    background-color: #00AF00;
-    transition: 0.5s all;
-    border-radius: 60px;
+    text-transform: uppercase;
+    transform: translateY(-50%);
+  }
+  
+  .textbox input:focus + .check-message{
+    display: none;
+  }
+  
+  .options{
+    margin-top: 15px;
+    color: #f4f4f480;
+    overflow: hidden;
+    font-size: 14px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .remember-me{
+    float: left;
+    display: flex;
+    align-items: center;
     cursor: pointer;
-    font-size: 20px;
-}
-.BtnForm:hover{
-    background-color: #0adf0a;
-}
+    font-size: 12px;
+  }
+  
+  .checkbox{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #484848;
+    margin-right: 15px;
+    position: relative;
+  }
+  
+  .checkbox input{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .checked{
+    position: absolute;
+    left: 8px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+    display: none;
+  }
+  
+  .checkbox input:checked + .checked{
+    display: block;
+  }
+  
+  .options a{
+    color: #f4f4f480;
+    font-size: 14px;
+    float: right;
+    font-size: 12px;
+  }
+  
+  .login-btn{
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+    background: #191919;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: .3s linear;
+    color: #ffffffab;
+
+  }
+  
+  .login-btn.active{
+    background: #037bee;
+    color: #fff;
+  }
+  
+  .login-btn.active:hover{
+    opacity: .7;
+  }
+  
+  .hidden{
+    display: none;
+  }
+  
+  .privacy-link{
+    text-align: center;
+    margin-top: 35px;
+  }
+  
+  .privacy-link a{
+    color: #f1f1f1;
+    font-size: 14px;
+  }
+  
+  .dont-have-account{
+    font-size: 14px;
+    text-align: center;
+    color: #f4f4f480;
+    margin: 20px 0;
+  }
+  
+  .dont-have-account a{
+    color: #f1f1f1;
+  }
+  
+  @media screen and (max-width:470px) {
+    body{
+      background: #202020;
+    }
+  
+    .login-form{
+      width: 100%;
+      padding: 0 15px;
+    }
+  }
+  
