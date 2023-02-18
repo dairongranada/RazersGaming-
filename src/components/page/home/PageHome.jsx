@@ -4,7 +4,7 @@ import $ from "jquery";
 
 
 // --> (context)  CONTIENE LA INFO DEL USUARIO  
-// const { user } = useAuth() utilizar para traer info
+
 
 
 
@@ -24,6 +24,7 @@ import VideoBackground from '../../../image/VideoBackground.mp4'
 
 export const PageHome = () => {
 
+ 
 
 
 

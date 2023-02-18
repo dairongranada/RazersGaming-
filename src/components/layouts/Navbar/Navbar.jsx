@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import './Navbar.css'
 
+import { useAuth } from '../../../context/authContext' 
 import GamingLogo from '../../../image/GamingLogo.png'
-import { useAuth } from "../../../context/authContext"
 
 
 export const Navbar = () => {
@@ -10,6 +10,9 @@ export const Navbar = () => {
   const [sidebarNav, setSidebarnav] = useState("close")
     const OpenMenu = () => {setSidebarnav("showMenu")}
     const CloseMenu = () => {setSidebarnav("close")}
+
+
+    const  user  = useAuth() //utilizar para traer info
 
 
   return (
