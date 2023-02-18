@@ -1,33 +1,40 @@
 import './SingUp.css';
 import React, { useEffect, useState } from "react";
-
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from '../../../context/authContext'
+import { Alert } from "../../.././Helpers/Alert";
 
 export const SingUp = () => {
 
-const [first, setfirst] = useState()
+
+  const [user, setUser] = useState({
+    email: "",
+    password: "",
+  });
+
+
+  const { login } = useAuth();
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+    try {
+      await login(user.email, user.password);
+      navigate("/");
+    } catch (error) {
+      setError(error.message);
+    }
+  };
+
+  const handleChange = ({ target: { value, name } }) =>
+    setUser({ ...user, [name]: value });
 
 
 
-  // $(".textbox input").focusout(function(){
-  //   if($(this).val() == ""){
-  //     $(this).siblings().removeClassName("hidden");
-  //     $(this).css("background","#554343");
-  //   }else{
-  //     $(this).siblings().addClassName("hidden");
-  //     $(this).css("background","#484848");
-  //   }
-  // });
-  
-  // $(".textbox input").keyup(function(){
-  //   var inputs = $(".textbox input");
-  //   if(inputs[0].value != "" && inputs[1].value){
-  //     $(".login-btn").attr("disabled",false);
-  //     $(".login-btn").addClassName("active");
-  //   }else{
-  //     $(".login-btn").attr("disabled",true);
-  //     $(".login-btn").removeClassName("active");
-  //   }
-  // }); 
+
 
 
   return (
@@ -40,14 +47,26 @@ const [first, setfirst] = useState()
 
         <h6>Sign In</h6>
 
-        <form action="">
+        <form onSubmit={handleSubmit} >
           <div className="textbox">
-            <input type="text" placeholder="Username Or Email" />
+            <input 
+              type="email" 
+              placeholder="Username Or Email" 
+              name="email"
+              id="email"
+              onChange={handleChange}
+            />
             <span className="check-message hidden">Required</span>
           </div>
 
           <div className="textbox">
-            <input type="password" placeholder="Password" />
+            <input 
+              type="password" 
+              placeholder="Password"
+              name="password"
+              id="password"
+              onChange={handleChange}
+            />
             <span className="check-message hidden">Required</span>
           </div>
 
@@ -62,7 +81,10 @@ const [first, setfirst] = useState()
             <a href="#">Forgot Your Password</a>
           </div>
 
-          <input type="submit" value="Log In Now" className="login-btn" />
+          <span className='spanError'> 
+            {error && <Alert message={"Error: Incorrect Email or Password"} />}
+          </span>
+          <button type='submit' value="Log In Now" className="login-btn" >Log In Now</button>
 
           <div className="privacy-link">
             <a href="#">Privacy Policy</a>

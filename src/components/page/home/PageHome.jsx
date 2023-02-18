@@ -2,6 +2,12 @@ import './PageHome.css';
 import React, { useEffect, useState } from "react";
 import $ from "jquery";
 
+
+// --> (context)  CONTIENE LA INFO DEL USUARIO  
+// const { user } = useAuth() utilizar para traer info
+
+
+
 import GamingLogo from '../../../image/GamingLogo.png'
 import ShapeWebsite from '../../../image/ShapeWebsite.png'
 import Counter from '../../../image/Teams/Counter.jpg'
@@ -15,17 +21,10 @@ import VideoBackground from '../../../image/VideoBackground.mp4'
 
 
 
+
 export const PageHome = () => {
-  
-  useEffect(() => {
-    $('#change_status_vol ').html(`<span id='change_status_vol'>Muted <i className="fa-solid fa-volume-xmark"></i></span>`)
-  }, [])
 
 
- 
-function changeStatus() {
-
-}
 
 
 
@@ -44,7 +43,7 @@ function changeStatus() {
               </div>
             </div>
           </div>
-          <div onClick={changeStatus} className="Volume">
+          <div className="Volume">
                 <span  id='change_status_vol'><i className="fa-solid fa-volume-high"></i> </span>
             </div>
         </div>
