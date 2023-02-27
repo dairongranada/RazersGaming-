@@ -12,13 +12,13 @@ export const Navbar = () => {
     const CloseMenu = () => {setSidebarnav("close")}
 
 
-    const  user  = useAuth() //utilizar para traer info
-
+    const user  = useAuth()  //utilizar para traer info
 
   return (
     <>
       <div className={`sidebar ${sidebarNav}`}>
         <div className="logo-details">
+          
           {sidebarNav == "close" &&
             <i onClick={OpenMenu} className='bx bx-menu' style={{cursor:"pointer"}} ></i>
           }

@@ -80,7 +80,6 @@ export const SingUp = () => {
             </label>
             <a href="#">Forgot Your Password</a>
           </div>
-
           <span className='spanError'> 
             {error && <Alert message={"Error: Incorrect Email or Password"} />}
           </span>

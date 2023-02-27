@@ -2,6 +2,7 @@ import './PageHome.css';
 import React, { useEffect, useState } from "react";
 import $ from "jquery";
 
+import { useAuth } from '../../../context/authContext'
 
 // --> (context)  CONTIENE LA INFO DEL USUARIO  
 
@@ -24,7 +25,7 @@ import VideoBackground from '../../../image/VideoBackground.mp4'
 
 export const PageHome = () => {
 
- 
+  const { user } = useAuth() //utilizar para traer info
 
 
 
@@ -32,24 +33,24 @@ export const PageHome = () => {
   return (
     <>
       <div className="backgroundContainer"></div>
-      <section style={{marginLeft:"5rem"}}>
+      <section style={{ marginLeft: "5rem" }}>
         <div className="heroSection" id="Hero">
-          <video playsInline autoPlay loop muted  src={VideoBackground} className="backgroundVideo"></video>
+          <video playsInline autoPlay loop muted src={VideoBackground} className="backgroundVideo"></video>
           <div className="leftSide">
             <div className="heroTextContainer">
-              <h1 className="mainTextHero">Game Changing</h1>
+              <h1 className="mainTextHero">Game Changing </h1>
               <h2 className="secondTextHero">Make your gaming experience reach another level with us.</h2>
-              <div style={{display:"flex", gap:"20px" }}>
-                  <a href="/sing/in" className="buttonHero">Sign in</a>
+              <div style={{ display: "flex", gap: "20px" }}>
+                <a href="/sing/in" className="buttonHero">Sign in</a>
               </div>
             </div>
           </div>
           <div className="Volume">
-                <span  id='change_status_vol'><i className="fa-solid fa-volume-high"></i> </span>
-            </div>
+            <span id='change_status_vol'><i className="fa-solid fa-volume-high"></i> </span>
+          </div>
         </div>
 
-        <img src={ShapeWebsite} style={{marginLeft:"3.5rem"}} alt="" className="shapeBackground" id="ShapeLeft" />
+        <img src={ShapeWebsite} style={{ marginLeft: "3.5rem" }} alt="" className="shapeBackground" id="ShapeLeft" />
         <div className="teamsSection">
           <div className="teamsSectionContainer">
             <h2 className="teamsSectionTitle">GAMES</h2>
@@ -64,7 +65,6 @@ export const PageHome = () => {
               </div>
             </div>
           </div>
-          
         </div>
 
 
@@ -73,30 +73,14 @@ export const PageHome = () => {
           <div className="container">
             <div className="card_box">
               <span className='card_box_Premium' ></span>
-                <div className='card_box_buy'>
-                  <div className='card_box_advantages'>
-                    <p><i className="fa-sharp fa-solid fa-check-to-slot"></i> Early access </p>
-                    <p style={{padding: "25px 9px 22px 21px", fontSize: "13px" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab fugit esse animi doloribus id! Autem lab, libero quae.</p>
-                  </div>
-                  <div className='card_box_price'>
+              <div className='card_box_buy'>
+                <div className='card_box_advantages'>
+                  <p><i className="fa-sharp fa-solid fa-check-to-slot"></i> Early access </p>
+                  <p style={{ padding: "25px 9px 22px 21px", fontSize: "13px" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab fugit esse animi doloribus id! Autem lab, libero quae.</p>
+                </div>
+                <div className='card_box_price'>
                   <h1>$30.000 COP</h1>
-                  <button style={{border:"none", marginTop:"1rem" }} className='buttonHero' >Buy premium pass</button>
-                </div>
-                </div>
-            </div>
-          </div>
-
-          <div className="container">
-            <div className="card_box">
-            <span className='card_box_Premium'></span>
-              <div className='card_box_buy'>
-                <div className='card_box_advantages'>
-                  <p><i className="fa-sharp fa-solid fa-check-to-slot"></i> Early access </p>
-                  <p style={{padding: "25px 9px 22px 21px", fontSize: "13px" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab fugit esse animi doloribus id! Autem lab, libero quae.</p>
-                  </div>
-                  <div className='card_box_price'>
-                    <h1>$20.000 COP</h1>
-                  <button style={{border:"none", marginTop:"1rem" }} className='buttonHero' >Buy premium pass</button>
+                  <button style={{ border: "none", marginTop: "1rem" }} className='buttonHero' >Buy premium pass</button>
                 </div>
               </div>
             </div>
@@ -104,19 +88,55 @@ export const PageHome = () => {
 
           <div className="container">
             <div className="card_box">
-            <span className='card_box_Basic' ></span>
+              <span className='card_box_Premium'></span>
               <div className='card_box_buy'>
                 <div className='card_box_advantages'>
                   <p><i className="fa-sharp fa-solid fa-check-to-slot"></i> Early access </p>
-                  <p style={{padding: "25px 9px 22px 21px", fontSize: "13px" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab fugit esse animi doloribus id! Autem lab, libero quae.</p>
-                  </div>
-                  <div className='card_box_price'>
-                    <h1>$10.000 COP</h1>
-                  <button style={{border:"none", marginTop:"1rem" }} className='buttonHero' >Buy basic pass</button>
+                  <p style={{ padding: "25px 9px 22px 21px", fontSize: "13px" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab fugit esse animi doloribus id! Autem lab, libero quae.</p>
+                </div>
+                <div className='card_box_price'>
+                  <h1>$20.000 COP</h1>
+                  <button style={{ border: "none", marginTop: "1rem" }} className='buttonHero' >Buy premium pass</button>
                 </div>
               </div>
             </div>
           </div>
+
+          <div className="container">
+            <div className="card_box">
+              <span className='card_box_Basic' ></span>
+              <div className='card_box_buy'>
+                <div className='card_box_advantages'>
+                  <p><i className="fa-sharp fa-solid fa-check-to-slot"></i> Early access </p>
+                  <p style={{ padding: "25px 9px 22px 21px", fontSize: "13px" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab fugit esse animi doloribus id! Autem lab, libero quae.</p>
+                </div>
+                <div className='card_box_price'>
+                  <h1>$10.000 COP</h1>
+                  <button style={{ border: "none", marginTop: "1rem" }} className='buttonHero' >Buy basic pass</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div className="container">
+            <div className="card_box">
+              <span className='card_box_Basic' ></span>
+              <div className='card_box_buy'>
+                <div className='card_box_advantages'>
+                  <p><i className="fa-sharp fa-solid fa-check-to-slot"></i> Early access </p>
+                  <p style={{ padding: "25px 9px 22px 21px", fontSize: "13px" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab fugit esse animi doloribus id! Autem lab, libero quae.</p>
+                </div>
+                <div className='card_box_price'>
+                  <h1>$10.000 COP</h1>
+                  <button style={{ border: "none", marginTop: "1rem" }} className='buttonHero' >Buy basic pass</button>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+
 
         </div>
       </section>
